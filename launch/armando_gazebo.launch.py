@@ -114,7 +114,13 @@ def generate_launch_description():
         arguments=[
             '/camera@sensor_msgs/msg/Image@gz.msgs.Image',
             '/camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo',
+            
+            # Camera sul polso: Gazebo -> ROS
+            '/wrist_camera/image@sensor_msgs/msg/Image[gz.msgs.Image',
+            '/wrist_camera/camera_info@sensor_msgs/msg/CameraInfo[gz.msgs.CameraInfo',
+            
             '/world/armando_workbench/dynamic_pose/info@tf2_msgs/msg/TFMessage[gz.msgs.Pose_V',
+
             
             # Bridge per i comandi di presa 
             '/gripper/attach_a@std_msgs/msg/Empty@gz.msgs.Empty',

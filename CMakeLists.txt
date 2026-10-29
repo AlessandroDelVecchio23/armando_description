@@ -28,4 +28,11 @@ install(
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Installa lo script come eseguibile individuabile da ros2 run.
+install(PROGRAMS
+  scripts/armando_keyboard_teleop.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME armando_keyboard_teleop
+)
+
 ament_package()
